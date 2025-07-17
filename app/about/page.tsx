@@ -1,19 +1,17 @@
 import React from "react";
+import Image from "next/image";
 import {
   Card,
   CardContent,
   CardFooter,
   CardHeader,
-  CardTitle,
 } from "@/components/ui/Card";
 import { dataAbout } from "@/data/About";
-import { ArrowUpRightIcon, Github, Map } from "lucide-react";
 import SquqreMyImage from "@/public/image/squareMyImage.png";
-import Image from "next/image";
+import { ArrowUpRightIcon, Github, Map } from "lucide-react";
 
 const About = () => {
-  const { namaLengkap, alamat, biagrafi, education, experience, foto } =
-    dataAbout;
+  const { namaLengkap, alamat, biagrafi, education, experience } = dataAbout;
   return (
     <section className="mt-[56px] ">
       <div className="grid grid-cols-3 space-x-6">
@@ -40,7 +38,7 @@ const About = () => {
             {education &&
               education.length > 0 &&
               education.map((item, index) => (
-                <div key={item.id}>
+                <div key={index}>
                   <Card className="bg-accent w-fit hover:bg-primary hover:text-accent">
                     <CardHeader>
                       <div className="flex justify-between items-end">
@@ -70,7 +68,7 @@ const About = () => {
             {experience &&
               experience.length > 0 &&
               experience.map((item, index) => (
-                <Card className="bg-primary mb-6" key={item.id} >
+                <Card className="bg-primary mb-6" key={index}>
                   <CardContent>
                     <div className="grid grid-cols-4 space-x-2 items-start">
                       <div className="font-bold font-space-grotesk text-[22px]">
