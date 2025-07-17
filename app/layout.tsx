@@ -1,8 +1,10 @@
-import type { Metadata } from "next";
-import { Space_Grotesk, Inter } from "next/font/google";
 import "../styles/globals.css";
+import type { Metadata } from "next";
 import Navbar from "@/components/blocks/Navbar";
+import Footer from "@/components/blocks/Footer";
 import Container from "@/components/ui/Container";
+import { Space_Grotesk, Inter } from "next/font/google";
+
 
 const spaceGrotesk = Space_Grotesk({
   variable: "--font-space-grotesk",
@@ -33,6 +35,7 @@ export default function RootLayout({
         <Container className="py-0">
           <Navbar />
           {children}
+          <Footer />
         </Container>
       </body>
     </html>

@@ -23,6 +23,7 @@ export default function HeroSection() {
           src={ImageProfile}
           alt="image profile"
           className="w-[96px] h-[96px] aspect-square"
+          loading="eager"
         />
         <div>
           <p className="text-[24px] text-secondary font-[500]">
@@ -67,32 +68,35 @@ export default function HeroSection() {
         </p>
       </div>
       <div className="flex flex-wrap gap-6 mt-[56px]">
-        <Button className="bg-accent text-primary hover:bg-transparent hover:outline hover:outline-accent hover:text-accent ">
+        <Button
+          size={"md"}
+          className="bg-accent text-primary text-[22px] hover:bg-transparent hover:outline hover:outline-accent hover:text-accent  items-center space-x-2.5"
+        >
           View Projects <ArrowUpRight />
         </Button>
         <div className="flex space-x-4 items-center">
           <Link
             href={"https://github.com/Laloeyudik"}
             target="_blank"
-            className="p-2 hover:rounded-md hover:bg-secondary hover:text-primary"
+            className="p-2  text-thirty hover:rounded-md hover:bg-secondary hover:text-primary"
           >
             <Github />
           </Link>
           <Link
             href={"#"}
-            className="p-2 hover:rounded-md hover:bg-secondary hover:text-primary"
+            className="p-2 text-thirty hover:rounded-md hover:bg-secondary hover:text-primary"
           >
             <Linkedin />
           </Link>
           <Link
             href={"#"}
-            className="p-2 hover:rounded-md hover:bg-secondary hover:text-primary"
+            className="p-2 text-thirty hover:rounded-md hover:bg-secondary hover:text-primary"
           >
             <Instagram />
           </Link>
           <Link
             href={"#"}
-            className="p-2 hover:rounded-md hover:bg-secondary hover:text-primary"
+            className="p-2 text-thirty hover:rounded-md hover:bg-secondary hover:text-primary"
           >
             <Youtube />
           </Link>

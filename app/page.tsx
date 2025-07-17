@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/Button";
 import { dataTechStack } from "@/data/TechStack";
 import HeroSection from "@/components/blocks/HeroSection";
 import { BookType, Database, Layers, Wrench } from "lucide-react";
+import { Card, CardFooter, CardHeader } from "@/components/ui/Card";
 
 export default function Homes() {
   const [activeTab, setActiveTab] = React.useState<
@@ -43,15 +44,16 @@ export default function Homes() {
               >
                 {item.icon}
               </Button>
-              {index < 3 && <Image src={Lines} alt="line" />}
+              {index < 3 && <Image src={Lines} alt="line" loading="eager" />}
             </div>
           ))}
         </div>
-        <div className="mt-[46px] flex gap-[12px] flex-wrap">
+        <div className="mt-[36px] capitalize text-[24px]">{activeTab} :</div>
+        <div className="mt-[16px] flex gap-[12px] flex-wrap">
           {dataTechStack[activeTab].map((item, index) => (
             <motion.div
               key={index}
-              className="flex gap-2 items-center text-[24px] px-4 py-[6px] text-secondary bg-primary outline-1 outline-secondary w-fit rounded-[4px]"
+              className="flex gap-2 items-center text-[22px] px-4 py-[6px] text-secondary bg-primary outline-1 outline-secondary hover:outline-accent hover:text-accent w-fit rounded-[4px]"
               whileHover={{ rotate: 7 }}
               transition={{ duration: 0.4, ease: "easeInOut" }}
             >
@@ -59,13 +61,19 @@ export default function Homes() {
                 src={item.icon ?? Lines}
                 alt="logo bahasa pemrograman"
                 className="w-6 h-6 aspect-square"
+                loading="eager"
               />{" "}
               {item.title}
             </motion.div>
           ))}
         </div>
       </section>
-      <section>{/* tampikan sesuai yang di pilih */}</section>
+      <section>
+        <Card>
+          <CardHeader><h1>Ini Judul ku</h1> <p>Ini keterangan</p></CardHeader>
+          <CardFooter><p>Halos Ini carsd</p></CardFooter>
+        </Card>
+      </section>
 
       <div className="absolute h-screen w-full mx-auto inset-0 flex justify-center items-center pointer-events-none z-0">
         <div className="w-[394px] h-[394px] bg-accent rounded-full blur-[400px] mx-auto"></div>
