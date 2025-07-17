@@ -8,7 +8,6 @@ import { Button } from "@/components/ui/Button";
 import { dataTechStack } from "@/data/TechStack";
 import HeroSection from "@/components/blocks/HeroSection";
 import { BookType, Database, Layers, Wrench } from "lucide-react";
-import { Card, CardFooter, CardHeader } from "@/components/ui/Card";
 
 export default function Homes() {
   const [activeTab, setActiveTab] = React.useState<
@@ -69,10 +68,7 @@ export default function Homes() {
         </div>
       </section>
       <section>
-        <Card>
-          <CardHeader><h1>Ini Judul ku</h1> <p>Ini keterangan</p></CardHeader>
-          <CardFooter><p>Halos Ini carsd</p></CardFooter>
-        </Card>
+        
       </section>
 
       <div className="absolute h-screen w-full mx-auto inset-0 flex justify-center items-center pointer-events-none z-0">
