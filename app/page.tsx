@@ -33,7 +33,7 @@ export default function Homes() {
           ].map((item, index) => (
             <div key={item.key} className="flex items-center gap-3">
               <Button
-                onClick={() => setActiveTab(item.key as any)}
+                onClick={() => setActiveTab(item.key as  "languages" | "frameworks" | "tools" | "databases")}
                 variant={activeTab === item.key ? "default" : "outline"}
                 className={`px-2 py-2 ${
                   activeTab === item.key
