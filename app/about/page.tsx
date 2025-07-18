@@ -90,8 +90,17 @@ const About = () => {
                         </ul>
                         <div className="mt-4">
                           <h3 className="font-medium">Tech Stack:</h3>
-                          <div className="px-2 py-0.5 rounded-full outline-1 outline-thirty w-fit flex-wrap space-x-2.5">
-                            Golang
+                          <div className="flex space-x-2 flex-wrap mb-6 mt-3 font-inter text-[16px]">
+                            {item.techStack &&
+                              item.techStack.length > 0 &&
+                              item.techStack.map((itms, idxs) => (
+                                <div
+                                  key={idxs}
+                                  className="px-2 py-0.5 rounded-full outline-1 outline-thirty w-fit flex-wrap space-x-2.5"
+                                >
+                                  {itms}
+                                </div>
+                              ))}
                           </div>
                         </div>
                       </div>

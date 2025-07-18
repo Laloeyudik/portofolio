@@ -17,9 +17,9 @@ export default function Homes() {
   return (
     <div className="relative py-0">
       <HeroSection />
-      <section className="mt-[78px]">
+      <section className="mt-[46px]">
         <div>
-          <h2 className="text-[32px] font-[700] font-space-grotesk text-secondary">
+          <h2 className="text-[28px] lg:text-[32] font-[700] font-space-grotesk text-secondary">
             Tech Stack
           </h2>
         </div>
@@ -35,7 +35,7 @@ export default function Homes() {
               <Button
                 onClick={() => setActiveTab(item.key as  "languages" | "frameworks" | "tools" | "databases")}
                 variant={activeTab === item.key ? "default" : "outline"}
-                className={`px-2 py-2 ${
+                className={`p-2 ${
                   activeTab === item.key
                     ? "bg-secondary text-accent"
                     : "hover:bg-secondary hover:text-accent"
@@ -43,16 +43,16 @@ export default function Homes() {
               >
                 {item.icon}
               </Button>
-              {index < 3 && <Image src={Lines} alt="line" loading="eager" />}
+              {index < 3 && <Image src={Lines} alt="line" loading="eager" className="hidden wrap-anywhere" />}
             </div>
           ))}
         </div>
-        <div className="mt-[36px] capitalize text-[24px]">{activeTab} :</div>
+        <div className="mt-[36px] font-space-grotesk capitalize text-[20px] lg:text-[22px]">{activeTab} :</div>
         <div className="mt-[16px] flex gap-[12px] flex-wrap">
           {dataTechStack[activeTab].map((item, index) => (
             <motion.div
               key={index}
-              className="flex gap-2 items-center text-[22px] px-4 py-[6px] text-secondary bg-primary outline-1 outline-secondary hover:outline-accent hover:text-accent w-fit rounded-[4px]"
+              className="flex gap-2 items-center text-[16px] md:text-[22px] px-4 py-[6px] text-secondary bg-primary outline-1 outline-secondary hover:outline-accent hover:text-accent w-fit rounded-[4px]"
               whileHover={{ rotate: 7 }}
               transition={{ duration: 0.4, ease: "easeInOut" }}
             >
@@ -67,9 +67,7 @@ export default function Homes() {
           ))}
         </div>
       </section>
-      <section>
-        
-      </section>
+
 
       <div className="absolute h-screen w-full mx-auto inset-0 flex justify-center items-center pointer-events-none z-0">
         <div className="w-[394px] h-[394px] bg-accent rounded-full blur-[400px] mx-auto"></div>

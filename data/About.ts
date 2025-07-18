@@ -25,6 +25,7 @@ export const dataAbout = {
       ],
       tahunStart: "2022",
       tahunAnd: "2023",
+      techStack: ["Golang", "React.js", "PostgreSQL"],
     },
     {
       id: 2,
@@ -37,6 +38,7 @@ export const dataAbout = {
       ],
       tahunStart: "2024",
       tahunAnd: "2025",
+      techStack: ["TypeScript", "Next.js", "Supabase"],
     },
     {
       id: 3,
@@ -47,6 +49,7 @@ export const dataAbout = {
       ],
       tahunStart: "2025",
       tahunAnd: "Present",
+      techStack: ["Next.js", "TypeScript"],
     },
   ],
 };

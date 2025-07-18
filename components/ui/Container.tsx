@@ -5,7 +5,7 @@ export default function Container({
   className,
 }: React.ComponentProps<"div">) {
   return (
-    <div className={`max-w-[62rem]  mx-auto md:px-0 px-4 ${className}`}>
+    <div className={`w-full lg:max-w-[62rem] mx-auto px-6 ${className}`}>
       {children}
     </div>
   );
